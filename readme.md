@@ -8,9 +8,10 @@ Build the container:
 
 Update the .env and _ss_environment.php files with the correct database settings. These files should have the same settings.
 
-Bash into the running sql image and create the database set in the .env and _ss_environment.php files:
+Bash into the running sql image and create the database name set in the .env and _ss_environment.php files:
 `docker exec -it <image id> /bin/bash`
 
+Login to mysql with the root user and no password.
 <!-- Add the domain to the `etc/hosts` file. -->
 
 For details about the Docker setup, see the info:
@@ -29,6 +30,8 @@ For details about the Docker setup, see the info:
 - `docker ps -a` -> Check all containers running and not running
 - `docker rm <container_id>` -> removes the container
 - `docker rmi <image_id>` -> removes the image
+
+## Back up and restore the DB (details here)[https://gist.github.com/spalladino/6d981f7b33f6e0afe6bb]
 
 ## Debugging
 - `docker logs <container_id>` -> logs of the container
